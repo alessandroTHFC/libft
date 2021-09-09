@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	wordCounter(char const *str, char c)
+int	wordCounter(const char *str, char c)
 {
 	int	words;
 	int	control;
@@ -23,12 +23,12 @@ int	wordCounter(char const *str, char c)
 
 //write strndrup or it will be read from the library? 
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	int	i;
 	int	start;
 	int	end;
-	char	**newStrs
+	char	**newStrs;
 
 	newStrs = (char **)malloc(sizeof(char *) * (wordCounter(s, c) + 1));
 	if (newStrs == NULL)

@@ -10,6 +10,8 @@ int	ft_isalpha(int c);
 int	ft_isascii(int c);
 int	ft_isdigit(int c);
 int	ft_isprint(int c);
+int	ft_tolower(int c);
+int	ft_toupper(int c);
 
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t n);
@@ -34,6 +36,11 @@ char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	**ft_split(const char *s, char c);
 int	ft_atoi(const char *str);
 char	*ft_itoa(int n);
+
+int	ft_islower(int c);
+int	ft_isspace(int c);
+int	ft_isupper(int c);
+
 
 #endif
 

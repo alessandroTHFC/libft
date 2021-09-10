@@ -9,7 +9,7 @@ int	finder(char c, const char *set)
 	{
 		if (set[i] == c)
 			return (1);
-		i++;	
+		i++;
 	}
 	return (0);
 }
@@ -30,5 +30,5 @@ char	*ft_strtrim(const char *s1, const char *set)
 	while (finder(s1[i], set) == 1)
 		i--;
 	len = i - start + 1;
-	return (ft_substr(s1, start, len);
+	return (ft_substr(s1, start, len));
 }

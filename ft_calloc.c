@@ -2,11 +2,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*newMem
+	void	*newmem;
 
-	newMem = malloc(count * size);
+	newmem = (void *)malloc(count * size);
 	if (newMem == NULL)
 		return (NULL);
 	ft_bzero(s, count * size);
-	return (newMem);
+	return (newmem);
 }

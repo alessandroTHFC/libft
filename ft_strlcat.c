@@ -12,7 +12,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	while (src[dstsize - 1] && dstsize + 1 < size)
 	{
 		dest[dstsize] = src[dstsize - i]
-		dstsize++;
+			dstsize++;
 	}
 	if (i < size)
 		dest[dstsize] = '\0';

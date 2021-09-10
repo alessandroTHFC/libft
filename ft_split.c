@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	wordCounter(const char *str, char c)
+int	wordcounter(const char *str, char c)
 {
 	int	words;
 	int	control;
@@ -25,12 +25,12 @@ int	wordCounter(const char *str, char c)
 
 char	**ft_split(const char *s, char c)
 {
-	int	i;
-	int	start;
-	int	end;
-	char	**newStrs;
+	int		i;
+	int		start;
+	int		end;
+	char	**newstrs;
 
-	newStrs = (char **)malloc(sizeof(char *) * (wordCounter(s, c) + 1));
+	newstrs = (char **)malloc(sizeof(char *) * (wordCounter(s, c) + 1));
 	if (newStrs == NULL)
 		return (NULL);
 	end = 0;
@@ -44,10 +44,10 @@ char	**ft_split(const char *s, char c)
 			end++;
 		if (end > start)
 		{
-			newStrs[i] = ft_strndup(s + start, end - start);
+			newstrs[i] = ft_strndup(s + start, end - start);
 			i++;
 		}
 	}
-	newStrs[i] = NULL;
-	return (newStrs);
+	newstrs[i] = NULL;
+	return (newstrs);
 }

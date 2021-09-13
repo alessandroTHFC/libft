@@ -20,9 +20,7 @@ int	wordcounter(const char *str, char c)
 	}
 	return (words);
 }
-
-//write strndrup or it will be read from the library? 
-
+ 
 char	**ft_split(const char *s, char c)
 {
 	int		i;
@@ -30,8 +28,8 @@ char	**ft_split(const char *s, char c)
 	int		end;
 	char	**newstrs;
 
-	newstrs = (char **)malloc(sizeof(char *) * (wordCounter(s, c) + 1));
-	if (newStrs == NULL)
+	newstrs = (char **)malloc(sizeof(char *) * (wordcounter(s, c) + 1));
+	if (newstrs == NULL)
 		return (NULL);
 	end = 0;
 	i = 0;

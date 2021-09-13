@@ -5,8 +5,8 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*newmem;
 
 	newmem = (void *)malloc(count * size);
-	if (newMem == NULL)
+	if (newmem == NULL)
 		return (NULL);
-	ft_bzero(s, count * size);
+	ft_bzero(newmem, count);
 	return (newmem);
 }

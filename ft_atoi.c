@@ -6,11 +6,11 @@ int	ft_atoi(const char *str)
 	int	posneg;
 
 	value = 0;
-	posNeg = 1;
+	posneg = 1;
 	while (ft_isspace(*str))
 		str++;
 	if (*str == '-')
-		posNeg = -1;
+		posneg = -1;
 	if (*str == '-' || *str == '+')
 		str++;
 	while (*str >= '0' && *str <= '9')

@@ -7,20 +7,20 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	j = 0;
+	if (!needle || !haystack)
+		return (NULL);
 	if (!*needle)
 		return ((char *)haystack);
-	while (haystack[i] != '\0' && i < len)
+	while (haystack[i] != '\0' && i <= len)
 	{
 		if (haystack[i] == needle[0])
 		{
-			while (needle[j] != '\0')
+			while (needle[j] != '\0'
+				&& haystack[i + j] == needle[j] && i + j <= len)
 			{
-				while (haystack[i + j] == needle[j] && i + j < len)
-				{
-					if (needle[j + 1] == '\0')
-						return ((char *)&haystack[i]);
-					j++;
-				}
+				if (needle[j + 1] == '\0')
+					return ((char *)(haystack + i));
+				j++;
 			}
 		}
 		i++;

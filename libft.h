@@ -41,6 +41,9 @@ int	ft_islower(int c);
 int	ft_isspace(int c);
 int	ft_isupper(int c);
 
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(const char *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
 

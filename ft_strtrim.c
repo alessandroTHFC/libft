@@ -19,6 +19,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	i;
 	size_t	start;
 	size_t	len;
+	char	*rvalue;
 
 	i = 0;
 	while (finder(s1[i], set) == 1)
@@ -30,5 +31,6 @@ char	*ft_strtrim(const char *s1, const char *set)
 	while (finder(s1[i], set) == 1)
 		i--;
 	len = i - start + 1;
-	return (ft_substr(s1, start, len));
+	rvalue = ft_substr(s1, start, len);
+	return (rvalue);
 }

@@ -2,12 +2,12 @@
 
 char	*ft_itoa(int n)
 {
-	char			base[10];
+	char			*base;
 	size_t			len;
 	unsigned int	nbr;
 	char			*ret;
 
-	base[10] = "0123456789";
+	base = "0123456789";
 	if (n < 0)
 		nbr = (unsigned int) -n;
 	else

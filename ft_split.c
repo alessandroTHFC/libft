@@ -20,7 +20,7 @@ int	wordcounter(const char *str, char c)
 	}
 	return (words);
 }
- 
+
 char	**ft_split(const char *s, char c)
 {
 	int		i;

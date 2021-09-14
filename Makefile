@@ -10,7 +10,10 @@ FILES	= ft_memset.c \
 		ft_memmove.c \
 		ft_memchr.c \
 		ft_memcmp.c \
+		ft_strtrim.c \
+		ft_substr.c \
 		ft_strdup.c \
+		ft_strrchr.c \
 		ft_strlcat.c \
 		ft_strlcpy.c \
 		ft_strmapi.c \
@@ -21,6 +24,8 @@ FILES	= ft_memset.c \
 		ft_striteri.c \
 		ft_split.c \
 		ft_atoi.c \
+		ft_tolower.c \
+		ft_toupper.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
 		ft_isascii.c \
@@ -38,7 +43,7 @@ OBJ	= $(FILES:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(FILES)
+	ar rcs $(NAME) $(OBJ)
 
 $(OBJ): $(FILES)
 	gcc $(CFLAGS) $(FILES)

@@ -42,7 +42,7 @@ char	**ft_split(const char *s, char c)
 			end++;
 		if (end > start)
 		{
-			newstrs[i] = ft_strndup(s + start, end - start);
+			newstrs[i] = ft_strdup(s + start);
 			i++;
 		}
 	}

@@ -2,12 +2,12 @@
 
 char	*ft_itoa(int n)
 {
-	char			base[];
+	char			base[10];
 	size_t			len;
 	unsigned int	nbr;
 	char			*ret;
 
-	base[] = "0123456789"
+	base[10] = "0123456789";
 	if (n < 0)
 		nbr = (unsigned int) -n;
 	else
@@ -18,7 +18,7 @@ char	*ft_itoa(int n)
 		len = 1;
 	while ((nbr = nbr / 10) > 0)
 		len++;
-	ret = (char *)malloc((len + 1) * sizeof(char))
+	ret = (char *)malloc((len + 1) * sizeof(char));
 	if (ret == NULL)
 		return (NULL);
 	if (n < 0)

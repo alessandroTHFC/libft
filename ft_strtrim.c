@@ -1,36 +1,34 @@
 #include "libft.h"
 
-int	finder(char c, const char *set)
+int	find_match(char s, const char *set)
 {
 	int	i;
 
 	i = 0;
-	while (set[i] != '\0')
+	while (set[i])
 	{
-		if (set[i] == c)
+		if (set[i] == s)
 			return (1);
 		i++;
 	}
 	return (0);
 }
 
-char	*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	start;
 	size_t	len;
-	char	*rvalue;
 
 	i = 0;
-	while (finder(s1[i], set) == 1)
+	while (find_match(s1[i], set) == 1)
 		i++;
 	start = i;
-	while (s1[i] != '\0')
+	while (s1[i])
 		i++;
 	i--;
-	while (finder(s1[i], set) == 1)
+	while (find_match(s1[i], set) == 1)
 		i--;
 	len = i - start + 1;
-	rvalue = ft_substr(s1, start, len);
-	return (rvalue);
+	return (ft_substr(s1, start, len));
 }

@@ -2,32 +2,25 @@
 
 char	*ft_itoa(int n)
 {
-	char			*base;
-	size_t			len;
-	unsigned int	nbr;
-	char			*ret;
+	char			*str;
 
-	base = "0123456789";
-	if (n < 0)
-	{
-		nbr = (unsigned int) -n;
-		len = 2;
-	}
-	if (n > 0)
-	{
-		nbr = (unsigned int) n;
-		len = 1;
-	}
-	while (nbr / 10 > 0)
-		len++;
-	ret = (char *)malloc((len + 1) * sizeof(char));
-	if (ret == NULL)
+	str = (char *)malloc(sizeof(char) * 2);
+	if (str == NULL)
 		return (NULL);
-	ret[len--] = 0;
-	ret[len--] = base[nbr % 10];
-	while (nbr / 10 > 10)
-		ret[len--] = base[nbr % 10];
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	if (n < 0)
-		ret[0] = '-';
-	return (ret);
+	{
+		str[0] = '-';
+		str[1] = '\0';
+		str = ft_strjoin(str, ft_itoa(-n));
+	}
+	else if (n >= 10)
+		str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
+	else if (n >= 0 && n < 10)
+	{
+		str[0] = n + '0';
+		str[1] = '\0';
+	}
+	return (str);
 }
